@@ -109,7 +109,6 @@ h1{
 .enlineablock{
     display:inline-block;
 }
-
 .tarjetasProductos{
     display: flex;
     flex-direction:row;
@@ -195,16 +194,16 @@ textarea {
     width: 100%;
 }
 .contact-form input, .contact-form textarea {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
- margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 .contact-form input:focus, .contact-form textarea:focus {
-  outline: none;
-  box-shadow: 0 0 5px #ff6384;
-  transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
+    outline: none;
+    box-shadow: 0 0 5px #ff6384;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
 }
 .contact-form button[type="submit"] {
     background-color: #ff6384;
@@ -219,7 +218,6 @@ textarea {
     transform: scale(1.1);
     transition: transform 0.3s ease-in-out;
 }
-
 footer{
     background-color: pink;
     display: flex;
@@ -373,6 +371,5 @@ footer{
         display: flex;
         width: 100vw;
         margin-top: 1rem;
-
     }
 }
