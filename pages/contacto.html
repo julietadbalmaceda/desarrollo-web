@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risustore</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container-flex"> 
+    <!-- comienzo del header -->
+        <header>
+            <img class="logo" src="../images/logo.png" alt="logo">
+            <form action="#" class="buscador">
+                <input class="inputBuscador" type="text" placeholder="Buscar">
+                <button>
+                    <img src="../images/busqueda.png" alt="buscador">
+                </button>
+            </form>
+            <img class="carrito" src="../images/carrito-de-compras.png" alt="carrito">
+    <!-- comienzo del nav -->
+    <nav>
+        <ul>
+            <li><a class="subrayado" href="../index.html">Home</a></li>
+            <li><a class="subrayado" href="productos.html">Productos</a></li>
+            <li>Contacto</li>
+            <li><a class="subrayado" href="registrarse.html">Registrarse</a></li>
+            <li><a class="subrayado" href="ingresar.html">Ingresar</a></li>
+        </ul>  
+    </nav>    
+    </header>
+    <!-- comienzo del main -->
+    <main class="containerForm">
+        <h1>
+            Contacto
+        </h1>
+        <div class="contact-form">
+            <span class="heading">Contáctanos</span>
+            <form>
+              <label for="name">Nombre:</label>
+              <input type="text" required="">
+              <label for="email">Correo electrónico:</label>
+              <input type="email" id="email" name="email" required="">
+              <label for="message">Mensaje:</label>
+              <textarea id="message" name="message" required=""></textarea>
+              <button type="submit">Enviar</button>
+            </form>
+        </div>          
+    </main>
+    <footer>
+        <p>Powered by Risustore</p>
+    </footer>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
