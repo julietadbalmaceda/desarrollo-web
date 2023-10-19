@@ -1,375 +1,453 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+  margin: 0px;
+  padding: 0px;
 }
-.container-flex{
+
+.container-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: grid;
+  background-color: #ffc0cb;
+  height: 10vmax;
+  width: 100%;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+header .logo {
+  grid-row: 2;
+  grid-column: 1/2;
+  height: 7vmax;
+  margin-left: 1vh;
+  margin-top: 1vh;
+}
+header .buscador {
+  display: flex;
+  border-radius: 5px;
+  align-self: center;
+  grid-row: 2/3;
+  height: 2rem;
+  grid-column: 3/6;
+}
+header .buscador .inputBuscador {
+  width: 50vw;
+  border-radius: 2em;
+  padding-left: 1rem;
+  border: 2px solid #ff6384;
+}
+header .buscador .buttonBusqueda {
+  margin-left: 1rem;
+}
+header .carrito {
+  display: flex;
+  justify-items: end;
+  grid-row: 2;
+  grid-column: 8;
+  align-self: center;
+}
+header nav {
+  grid-row: 4;
+  grid-column: 5/9;
+  display: flex;
+  justify-content: end;
+}
+header ul {
+  list-style-type: none;
+  margin: 0;
+  text-decoration: none;
+}
+header li {
+  display: inline-block;
+  margin: 0px 1rem;
+}
+header .subrayado {
+  text-decoration: none;
+  color: #ff6384;
+}
+
+h1 {
+  grid-row: 1;
+  grid-column: 1/9;
+  padding: 1rem;
+  text-align: center;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  font-family: "Lucida Sans", sans-serif;
+  color: #000000;
+}
+
+button {
+  background-color: #ffc0cb;
+  border: none;
+  border-radius: 5px;
+}
+
+.enlineablock {
+  display: inline-block;
+}
+
+footer {
+  background-color: #ffc0cb;
+  justify-content: space-around;
+  padding-top: 20px;
+  margin-top: 4vh;
+}
+footer .navFooter {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+footer .navFooter ul {
+  padding-left: 0px;
+}
+footer .navFooter ul li {
+  list-style-type: none;
+}
+footer .navFooter ul li a {
+  text-decoration: none;
+  color: #000000;
+}
+footer .navFooter ul li a:hover {
+  color: #ff6384;
+  font-size: 1.5rem;
+}
+footer .navFooter .redesSociales {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.containerHome {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 6vmax repeat(5, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+.containerHome .sectionBanner {
+  grid-row: 2/4;
+  grid-column: 1/9;
+}
+.containerHome .sectionBanner article {
+  display: flex;
+  align-items: center;
+}
+.containerHome .sectionBanner img {
+  width: 50%;
+}
+.containerHome .sectionBanner .articuloBienvenida {
+  display: inline-block;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 5vh;
+  margin-right: 5vh;
+}
+.containerHome .sectionBanner .articuloBienvenida h2:hover {
+  color: #ff6384;
+}
+.containerHome .tarjetasProductos {
+  display: flex;
+  flex-direction: row;
+  grid-row: 4/6;
+  grid-column: 1/9;
+  justify-content: center;
+}
+.containerHome .tarjetasProductos .productos {
+  width: 30%;
+  align-items: center;
+  margin: 1%;
+}
+.containerHome .tarjetasProductos .imagenesProductos {
+  width: 100%;
+}
+.containerHome .buttonVerProductos {
+  grid-row: 6/7;
+  grid-column: 4/6;
+}
+.containerHome .buttonVerProductos .buttonProductos {
+  background-color: #ff6384;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.containerRegistrarse, .containerContacto, .containerIngresar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+}
+.containerRegistrarse .contact-form, .containerContacto .contact-form, .containerIngresar .contact-form {
+  width: 60%;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+}
+.containerRegistrarse .contact-form label, .containerContacto .contact-form label, .containerIngresar .contact-form label {
+  color: #000000;
+  margin-bottom: 10px;
+}
+.containerRegistrarse .contact-form .heading, .containerContacto .contact-form .heading, .containerIngresar .contact-form .heading {
+  font-size: 24px;
+  color: #000000;
+  margin-bottom: 12px;
+  font-weight: bold;
+  display: block;
+}
+.containerRegistrarse .contact-form form, .containerContacto .contact-form form, .containerIngresar .contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+.containerRegistrarse .contact-form .checkFormulario, .containerContacto .contact-form .checkFormulario, .containerIngresar .contact-form .checkFormulario {
+  display: block;
+}
+.containerRegistrarse .contact-form .checkFormulario .enlineablock, .containerContacto .contact-form .checkFormulario .enlineablock, .containerIngresar .contact-form .checkFormulario .enlineablock {
+  display: inline-block;
+}
+.containerRegistrarse .contact-form textarea, .containerContacto .contact-form textarea, .containerIngresar .contact-form textarea {
+  resize: none;
+  height: 80px;
+  width: 100%;
+}
+.containerRegistrarse .contact-form input, .containerContacto .contact-form input, .containerIngresar .contact-form input, .containerRegistrarse .contact-form textarea, .containerContacto .contact-form textarea, .containerIngresar .contact-form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.containerRegistrarse .contact-form input:focus, .containerContacto .contact-form input:focus, .containerIngresar .contact-form input:focus, .containerRegistrarse .contact-form textarea:focus, .containerContacto .contact-form textarea:focus, .containerIngresar .contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px #ff6384;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+.containerRegistrarse .contact-form button[type=submit], .containerContacto .contact-form button[type=submit], .containerIngresar .contact-form button[type=submit] {
+  background-color: #ff6384;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.containerRegistrarse .contact-form button[type=submit]:hover, .containerContacto .contact-form button[type=submit]:hover, .containerIngresar .contact-form button[type=submit]:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+.containerRegistrarse .formIngresar, .containerContacto .formIngresar, .containerIngresar .formIngresar {
+  margin-top: 5vh;
+}
+
+.containerIngresar {
+  height: 70vh;
+}
+
+.containerContacto {
+  height: 90vh;
+}
+
+.productosArticleGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 5vh 1fr;
+  justify-items: center;
+  align-items: center;
+}
+.productosArticleGrid .carruselProducto {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  margin-bottom: 5vh;
+}
+.productosArticleGrid .parrafoArticleProductos {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.productosArticleGrid .buttonProductos {
+  background-color: #ff6384;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .container-flex {
     display: flex;
     flex-direction: column;
-}
-header{
-    display: grid;
-    background-color: pink;
+    width: 100vw;
+  }
+  header {
+    height: 15vh;
     width: 100%;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    height: 10vmax;
-}
-.logo{
-    grid-row: 2;
-    grid-column: 1/2;
+    display: grid;
+    grid-template-columns: 20% 50% 15% 15%;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+  }
+  header .inputBuscador {
+    display: none;
+  }
+  header .buscador {
+    grid-column: 3/4;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+  }
+  header .logo {
+    grid-row: 1;
+    grid-column: 1;
     height: 7vmax;
     margin-left: 1vh;
     margin-top: 1vh;
-}
-.buscador{
-    display: flex;
-    border-radius: 5px;
-    align-self: center;
-    grid-row: 2/3;
-    height: 2rem;
-    grid-column: 3 / 6;
-}
-.inputBuscador{
-    width: 50vw;
-}
-.carrito{
+  }
+  header .carrito {
     display: flex;
     justify-items: end;
-    grid-row: 2;
-    grid-column: 8;
-    align-self: center;
-}
-nav{
-    grid-row: 4;
-    grid-column: 5/9;
-    display: flex;
-    justify-content: end;
-}
-ul{
-    list-style-type: none;
-    margin: 0;
-    text-decoration: none;
-}
-li{
-    display: inline-block;
-    margin: 0px 1rem;
-}
-.containerHome{
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 6vmax repeat(5, 1fr);
-    align-items: center;
-    justify-items: center;
-}
-.productosArticleGrid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 5vh 1fr;
-    justify-items: center;
-    align-items: center;
-}
-.carruselProducto{
-    grid-column: 1/2;
-    grid-row: 2/3;
-    margin-bottom: 5vh;
-}
-.parrafoArticleProductos{
-    grid-column: 2/3;
-    grid-row: 2/3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-h1{
     grid-row: 1;
-    grid-column: 1/9;
-    padding: 1rem;
-    text-align: center;
-}
-.sectionBanner{
-    grid-row: 2/4;
-    grid-column: 1/9;
-}
-.sectionBanner article{
+    grid-column: 4/5;
+    align-self: center;
+  }
+  header nav {
+    grid-row: 2/3;
+    grid-column: 1/5;
+    padding: 0;
+  }
+  header nav ul {
     display: flex;
-    align-items: center;
-}
-.sectionBanner img{
-    width: 50%;
-}
-.articuloBienvenida{
-    display: inline-block;
-    width: 50%;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  header nav ul li {
+    font-size: 0.75em;
+    margin: 0 0.75rem;
+  }
+  .containerHome {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 5vh;
-    margin-right: 5vh;
-}
-.enlineablock{
-    display:inline-block;
-}
-.tarjetasProductos{
+    justify-items: center;
+    width: 100vw;
+    margin-bottom: 2rem;
+  }
+  .containerHome .sectionBanner {
     display: flex;
-    flex-direction:row;
-    grid-row: 4/6;
-    grid-column:1/9;
-    justify-content: center;
-}
-.productos{
-    width: 30%;
-    align-items:center;
-    margin: 1%;
-}
-p{
-    display: flex;
-    justify-content: center;
-    font-family: 'Lucida Sans', sans-serif;
-}
-.subrayado{
-    text-decoration: none;
-    color: #ff6384;
-}
-.imagenesProductos{
+    flex-direction: column;
+    align-items: center;
+  }
+  .containerHome .sectionBanner .articuloMovil {
+    width: 80%;
+    flex-direction: column;
+  }
+  .containerHome .sectionBanner .articuloBienvenida {
     width: 100%;
-}
-.buttonVerProductos{
-    grid-row: 6/7;
-    grid-column: 4/6;
-}
-.buttonProductos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+  .containerHome .tarjetasProductos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .containerHome .tarjetasProductos .productos {
+    width: 100%;
+    align-items: center;
+    margin: 1%;
+  }
+  .containerHome .tarjetasProductos .productos .imagenesProductos {
+    width: 10rem;
+  }
+  .containerHome .buttonProductos {
     background-color: #ff6384;
-    color: #fff;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     text-decoration: none;
-}
-button{
-    background-color: pink;
+  }
+  h1 {
+    padding: 1rem;
+    text-align: center;
+    font: 2em sans-serif;
+    color: #000000;
+  }
+  p {
+    display: flex;
+    justify-content: center;
+    font-family: "Lucida Sans", sans-serif;
+    color: #000000;
+  }
+  button {
+    background-color: #ffc0cb;
     border: none;
     border-radius: 5px;
-}
-.imagenProducto{
-    width: 50%;
-    height: 50%;
-}
-.containerForm{
+  }
+  .productosArticleGrid {
     display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+  .productosArticleGrid h2 {
+    margin: 0.75rem 0;
+    color: #000000;
+  }
+  .productosArticleGrid .carruselProducto {
+    margin-bottom: 5vh;
+  }
+  .productosArticleGrid .carruselProducto #Carrusel1 {
+    width: 12rem;
+  }
+  .productosArticleGrid .parrafoArticleProductos {
+    display: flex;
+    padding: 20px;
     flex-direction: column;
     align-items: center;
-}
-.formulario{
-    padding: 10px;
-}
-.checkFormulario{
-    display: block;
-}
-.contact-form {
-    width: 60%;
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 10px;
-}
-.contact-form label {
-    color: black;
-    margin-bottom: 10px;
-}
-.contact-form .heading {
-    font-size: 24px;
-    color: black;
-    margin-bottom: 12px;
-    font-weight: bold;
-    display: block;
-}
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-}
-textarea {
-    resize: none;
-    height: 80px;
+    text-align: center;
+  }
+  .productosArticleGrid .buttonProductos {
+    margin-bottom: 0.5rem;
+  }
+  .containerRegistrarse, .containerIngresar, .containerContacto {
+    height: 90vh;
+  }
+  .containerIngresar {
+    height: 60vh;
+  }
+  .containerIngresar .formIngresar {
+    margin-top: 2vh;
+  }
+  .containerContacto {
+    height: 75vh;
+  }
+  .contact-form {
     width: 100%;
+  }
+  footer {
+    width: 100vw;
+    margin-top: 1rem;
+  }
 }
-.contact-form input, .contact-form textarea {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-.contact-form input:focus, .contact-form textarea:focus {
-    outline: none;
-    box-shadow: 0 0 5px #ff6384;
-    transform: scale(1.05);
-    transition: transform 0.3s ease-in-out;
-}
-.contact-form button[type="submit"] {
-    background-color: #ff6384;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer; 
-}
-.contact-form button[type="submit"]:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
-}
-footer{
-    background-color: pink;
-    display: flex;
-    justify-content: space-around;
-    padding-top: 20px;
-    margin-top: 4vh;
-}
-/* ---------------------------------------------------------------------------------------------------- */
-/* ----------------------------------------VISTA EN MOBILE--------------------------------------------- */
-/* ---------------------------------------------------------------------------------------------------- */
-@media only screen and (max-width: 767px) {
-    .container-flex{
-        display: flex;
-        flex-direction: column;
-        width: 100vw;
-    }
-    header {
-        width: 100%;
-        height: 15vh;
-        display: grid;
-        grid-template-columns: 20% 50% 15% 15%;
-        grid-template-rows: 1fr 1fr;
-        align-items: center;
-    }
-    .inputBuscador {
-        display: none;
-    }
-    .buscador{
-        grid-column: 3/4;
-        grid-row: 1;
-        display: flex;
-        justify-content: center;
-    }
-    .logo{
-        grid-row: 1;
-        grid-column: 1;
-        height: 7vmax;
-        margin-left: 1vh;
-        margin-top: 1vh;
-    }
-    .carrito{
-        display: flex;
-        justify-items: end;
-        grid-row: 1;
-        grid-column: 4/5;
-        align-self: center;
-    }
-    nav{
-        grid-row: 2/3;
-        grid-column: 1/5;
-        padding: 0;
-    }
-    nav ul{
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0;
-    }
-    nav ul li{
-        font-size: 0.75em;
-        margin: 0 0.75rem;
-    }
-    .containerHome{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-items: center;
-        width: 100vw;
-    }
-    h1{
-        padding: 1rem;
-        text-align: center;
-        font: 2em sans-serif;
-    }
-    .sectionBanner article{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .sectionBanner img{
-        width: 50%;
-    }
-    .articuloBienvenida{
-        display: inline-block;
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-    }
-    .tarjetasProductos{
-        display: flex;
-        flex-direction:column;
-        justify-content: center;
-        align-items: center;
-    }
-    .productos{
-        width: 30%;
-        align-items:center;
-        margin: 1%;
-    }
-    p{
-        display: flex;
-        justify-content: center;
-        font-family: 'Lucida Sans', sans-serif;
-    }
-    .buttonProductos{
-        background-color: #ff6384;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        text-decoration: none;
-    }
-    button{
-        background-color: pink;
-        border: none;
-        border-radius: 5px;
-    }
-    .imagenProducto{
-        width: 50%;
-        height: 50%;
-    }
-    .productosArticleGrid{
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-        align-items: center;
-    }
-    .productosArticleGrid h2{
-        margin: 0.75rem 0;
-    }
-    .carruselProducto{
-        margin-bottom: 5vh;
-    }
-    .parrafoArticleProductos{
-        display: flex;
-        padding: 20px;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .buttonProductos{
-        margin-bottom: 0.5rem;
-    }
-    .contact-form {
-        width: 100%;
-    }
-    footer{
-        display: flex;
-        width: 100vw;
-        margin-top: 1rem;
-    }
-}
+
+/*# sourceMappingURL=styles.css.map */

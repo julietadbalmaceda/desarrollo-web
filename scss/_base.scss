@@ -1,0 +1,13 @@
+$colorSecundario: #ff6384;
+$colorPrimario: #ffc0cb;
+$fondoForm: #f2f2f2;
+$text-button: #ffffff;
+$color-texto: #000000;
+*{
+    margin: 0px;
+    padding: 0px;
+}
+@mixin sizes($width, $height) {
+    height: $height;
+    width: $width;
+} 

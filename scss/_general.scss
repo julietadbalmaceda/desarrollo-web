@@ -1,0 +1,111 @@
+.container-flex{
+    display: flex;
+    flex-direction: column;
+}
+header{
+    display: grid;
+    background-color: $colorPrimario;
+    @include sizes(100%, 10vmax);
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    .logo{
+        grid-row: 2;
+        grid-column: 1/2;
+        height: 7vmax;
+        margin-left: 1vh;
+        margin-top: 1vh;
+    }
+    .buscador{
+        display: flex;
+        border-radius: 5px;
+        align-self: center;
+        grid-row: 2/3;
+        height: 2rem;
+        grid-column: 3 / 6;
+        .inputBuscador{
+            width: 50vw;
+            border-radius: 2em;
+            padding-left: 1rem;
+            border: 2px solid $colorSecundario;
+        }
+        .buttonBusqueda{
+            margin-left: 1rem;
+        }
+    }
+    .carrito{
+        display: flex;
+        justify-items: end;
+        grid-row: 2;
+        grid-column: 8;
+        align-self: center;
+    }
+    nav{
+        grid-row: 4;
+        grid-column: 5/9;
+        display: flex;
+        justify-content: end;
+    }
+    ul{
+        list-style-type: none;
+        margin: 0;
+        text-decoration: none;
+    }
+    li{
+        display: inline-block;
+        margin: 0px 1rem;
+    }
+    .subrayado{
+        text-decoration: none;
+        color: $colorSecundario;
+    }
+}
+h1{
+    grid-row: 1;
+    grid-column: 1/9;
+    padding: 1rem;
+    text-align: center;
+}
+p{
+    display: flex;
+    justify-content: center;
+    font-family: 'Lucida Sans', sans-serif;
+    color: $color-texto
+}
+button{
+    background-color: $colorPrimario;
+    border: none;
+    border-radius: 5px;
+}
+.enlineablock{
+    display:inline-block;
+}
+footer{
+    background-color: $colorPrimario;
+    justify-content: space-around;
+    padding-top: 20px;
+    margin-top: 4vh;
+    .navFooter{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        ul{
+            padding-left: 0px;
+            li{
+                list-style-type: none;
+                a{
+                    text-decoration: none;
+                    color: $color-texto;
+                    &:hover{
+                        color: $colorSecundario;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+        .redesSociales{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    }
+}

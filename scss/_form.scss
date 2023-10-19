@@ -1,0 +1,73 @@
+.containerRegistrarse{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    .contact-form {
+        width: 60%;
+        background-color: $fondoForm;
+        padding: 20px;
+        border-radius: 10px;
+        label {
+        color: $color-texto;
+        margin-bottom: 10px;
+        }
+        .heading {
+            font-size: 24px;
+            color: $color-texto;
+            margin-bottom: 12px;
+            font-weight: bold;
+            display: block;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        .checkFormulario{
+            display: block;
+            .enlineablock{
+                display:inline-block;
+            }
+        }
+        textarea {
+            resize: none;
+            @include sizes(100%, 80px);
+        }
+        input, textarea {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            box-shadow: 0 0 5px $colorSecundario;
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        button[type="submit"] {
+            background-color: $colorSecundario;
+            color: $text-button;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer; 
+        }
+        button[type="submit"]:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
+        }
+    }
+    .formIngresar{
+        margin-top: 5vh;
+    }
+}
+.containerIngresar{
+    @extend .containerRegistrarse;
+    height: 70vh;
+}
+.containerContacto{
+    @extend .containerRegistrarse;
+    height: 90vh;
+}
