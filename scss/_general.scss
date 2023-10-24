@@ -64,12 +64,16 @@ h1{
     grid-column: 1/9;
     padding: 1rem;
     text-align: center;
+    font-family: $text;
+}
+h2{
+    font-family: $text;
 }
 p{
     display: flex;
     justify-content: center;
-    font-family: 'Lucida Sans', sans-serif;
-    color: $color-texto
+    font-family: $textSecundario;
+    color: $color-texto;
 }
 button{
     background-color: $colorPrimario;
@@ -88,10 +92,12 @@ footer{
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
+        height: 25vh;
         ul{
             padding-left: 0px;
             li{
                 list-style-type: none;
+                font-family: $text;
                 a{
                     text-decoration: none;
                     color: $color-texto;

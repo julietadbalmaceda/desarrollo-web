@@ -72,6 +72,11 @@ h1 {
   grid-column: 1/9;
   padding: 1rem;
   text-align: center;
+  font-family: "Comic Sans MS", sans-serif;
+}
+
+h2 {
+  font-family: "Comic Sans MS", sans-serif;
 }
 
 p {
@@ -101,12 +106,14 @@ footer .navFooter {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  height: 25vh;
 }
 footer .navFooter ul {
   padding-left: 0px;
 }
 footer .navFooter ul li {
   list-style-type: none;
+  font-family: "Comic Sans MS", sans-serif;
 }
 footer .navFooter ul li a {
   text-decoration: none;
