@@ -99,12 +99,13 @@ h1{
     padding: 1rem;
     text-align: center;
     font: 2em sans-serif;
-    color: $color-texto
+    color: $color-texto;
+    font-family: $text;
 }
 p{
     display: flex;
     justify-content: center;
-    font-family: 'Lucida Sans', sans-serif;
+    font-family: $textSecundario;
     color: $color-texto
 }
 button{
@@ -120,6 +121,7 @@ button{
     h2{
     margin: 0.75rem 0;
     color: $color-texto;
+    font-family: $text;
     }
     .carruselProducto{
         margin-bottom: 5vh;
@@ -158,4 +160,7 @@ button{
 footer{
     width: 100vw;
     margin-top: 1rem;
+    .navFooter{
+        height: auto;    
+    } 
 }

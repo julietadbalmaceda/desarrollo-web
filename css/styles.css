@@ -398,6 +398,7 @@ footer .navFooter .redesSociales {
     text-align: center;
     font: 2em sans-serif;
     color: #000000;
+    font-family: "Comic Sans MS", sans-serif;
   }
   p {
     display: flex;
@@ -419,6 +420,7 @@ footer .navFooter .redesSociales {
   .productosArticleGrid h2 {
     margin: 0.75rem 0;
     color: #000000;
+    font-family: "Comic Sans MS", sans-serif;
   }
   .productosArticleGrid .carruselProducto {
     margin-bottom: 5vh;
@@ -454,6 +456,9 @@ footer .navFooter .redesSociales {
   footer {
     width: 100vw;
     margin-top: 1rem;
+  }
+  footer .navFooter {
+    height: auto;
   }
 }
 
