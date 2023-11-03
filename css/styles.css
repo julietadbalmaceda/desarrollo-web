@@ -53,12 +53,12 @@ header nav {
   display: flex;
   justify-content: end;
 }
-header ul {
+header nav ul {
   list-style-type: none;
   margin: 0;
   text-decoration: none;
 }
-header li {
+header nav li {
   display: inline-block;
   margin: 0px 1rem;
 }
@@ -75,7 +75,7 @@ h1 {
   font-family: "Comic Sans MS", sans-serif;
 }
 
-h2 {
+h2, h3 {
   font-family: "Comic Sans MS", sans-serif;
 }
 
@@ -108,18 +108,21 @@ footer .navFooter {
   flex-wrap: wrap;
   height: 25vh;
 }
-footer .navFooter ul {
+footer .navFooter div {
+  width: 20%;
+}
+footer .navFooter div ul {
   padding-left: 0px;
 }
-footer .navFooter ul li {
+footer .navFooter div ul li {
   list-style-type: none;
   font-family: "Comic Sans MS", sans-serif;
 }
-footer .navFooter ul li a {
+footer .navFooter div ul li a {
   text-decoration: none;
   color: #000000;
 }
-footer .navFooter ul li a:hover {
+footer .navFooter div ul li a:hover {
   color: #ff6384;
   font-size: 1.5rem;
 }
@@ -239,8 +242,9 @@ footer .navFooter .redesSociales {
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
 }
-.containerRegistrarse .contact-form button[type=submit], .containerContacto .contact-form button[type=submit], .containerIngresar .contact-form button[type=submit] {
+.containerRegistrarse .contact-form .miBoton, .containerContacto .contact-form .miBoton, .containerIngresar .contact-form .miBoton {
   background-color: #ff6384;
+  width: 100%;
   color: #ffffff;
   border: none;
   border-radius: 5px;
@@ -248,7 +252,7 @@ footer .navFooter .redesSociales {
   font-size: 16px;
   cursor: pointer;
 }
-.containerRegistrarse .contact-form button[type=submit]:hover, .containerContacto .contact-form button[type=submit]:hover, .containerIngresar .contact-form button[type=submit]:hover {
+.containerRegistrarse .contact-form .miBoton:hover, .containerContacto .contact-form .miBoton:hover, .containerIngresar .contact-form .miBoton:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease-in-out;
 }
@@ -257,7 +261,24 @@ footer .navFooter .redesSociales {
 }
 
 .containerIngresar {
-  height: 70vh;
+  height: 80vh;
+}
+.containerIngresar .formIngresar .contenedorRegistroIngreso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.containerIngresar .formIngresar .contenedorRegistroIngreso p {
+  margin: 0;
+}
+.containerIngresar .formIngresar .contenedorRegistroIngreso div.nuevoRegistro {
+  height: 30px;
+}
+.containerIngresar .formIngresar .contenedorRegistroIngreso div.nuevoRegistro a {
+  text-decoration: none;
+  color: #ff6384;
 }
 
 .containerContacto {
@@ -294,6 +315,48 @@ footer .navFooter .redesSociales {
   text-decoration: none;
 }
 
+.containerCarrito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+.containerCarrito h2 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.containerCarrito .buttonCarrito {
+  margin-top: 15px;
+}
+.containerCarrito .buttonCarrito .buttonCarritoProductos {
+  background-color: #ff6384;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  --bs-link-hover-color: white;
+}
+
+.containerFaq {
+  height: 80vh;
+}
+.containerFaq .accordion {
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.10rem hsl(347, 100%, 69%);
+}
+.containerFaq .accordion .accordion-button {
+  color: #ffc0cb;
+}
+.containerFaq .accordion .accordion-button:not(.collapsed) {
+  color: #ff6384;
+  background-color: #ffc0cb;
+}
+.containerFaq .accordion .accordion-button:focus {
+  --accordion-btn-focus-border-color: $colorSecundario ;
+}
+
 @media only screen and (max-width: 767px) {
   .container-flex {
     display: flex;
@@ -308,14 +371,14 @@ footer .navFooter .redesSociales {
     grid-template-rows: 1fr 1fr;
     align-items: center;
   }
-  header .inputBuscador {
-    display: none;
-  }
   header .buscador {
     grid-column: 3/4;
     grid-row: 1;
     display: flex;
     justify-content: center;
+  }
+  header .buscador .inputBuscador {
+    display: none;
   }
   header .logo {
     grid-row: 1;
@@ -439,26 +502,46 @@ footer .navFooter .redesSociales {
     margin-bottom: 0.5rem;
   }
   .containerRegistrarse, .containerIngresar, .containerContacto {
-    height: 90vh;
+    height: 95vh;
+  }
+  .containerRegistrarse .contact-form, .containerIngresar .contact-form, .containerContacto .contact-form {
+    width: 90%;
+  }
+  .containerRegistrarse .contact-form .checkFormulario, .containerIngresar .contact-form .checkFormulario, .containerContacto .contact-form .checkFormulario {
+    display: flex;
+    justify-content: space-between;
+  }
+  .containerRegistrarse .contact-form .checkFormulario p, .containerIngresar .contact-form .checkFormulario p, .containerContacto .contact-form .checkFormulario p {
+    padding: 5px;
+    text-align: center;
+    width: 90%;
   }
   .containerIngresar {
-    height: 60vh;
+    height: 75vh;
   }
   .containerIngresar .formIngresar {
     margin-top: 2vh;
+    width: 85vw;
   }
   .containerContacto {
     height: 75vh;
   }
-  .contact-form {
-    width: 100%;
+  .containerCarrito {
+    height: 75vh;
+  }
+  .containerCarrito img {
+    width: 40vh;
   }
   footer {
     width: 100vw;
+    height: 40vh;
     margin-top: 1rem;
   }
   footer .navFooter {
     height: auto;
+  }
+  footer .navFooter div {
+    width: auto;
   }
 }
 

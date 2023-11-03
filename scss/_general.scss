@@ -38,21 +38,21 @@ header{
         grid-row: 2;
         grid-column: 8;
         align-self: center;
-    }
+    }    
     nav{
         grid-row: 4;
         grid-column: 5/9;
         display: flex;
         justify-content: end;
-    }
-    ul{
+        ul{
         list-style-type: none;
         margin: 0;
         text-decoration: none;
-    }
-    li{
-        display: inline-block;
-        margin: 0px 1rem;
+        }
+        li{
+            display: inline-block;
+            margin: 0px 1rem;
+        }
     }
     .subrayado{
         text-decoration: none;
@@ -66,7 +66,7 @@ h1{
     text-align: center;
     font-family: $text;
 }
-h2{
+h2, h3{
     font-family: $text;
 }
 p{
@@ -93,20 +93,23 @@ footer{
         justify-content: space-around;
         flex-wrap: wrap;
         height: 25vh;
-        ul{
-            padding-left: 0px;
-            li{
-                list-style-type: none;
-                font-family: $text;
-                a{
-                    text-decoration: none;
-                    color: $color-texto;
-                    &:hover{
-                        color: $colorSecundario;
-                        font-size: 1.5rem;
+        div{
+            width: 20%;
+            ul{
+                padding-left: 0px;
+                li{
+                    list-style-type: none;
+                    font-family: $text;
+                    a{
+                        text-decoration: none;
+                        color: $color-texto;
+                        &:hover{
+                            color: $colorSecundario;
+                            font-size: 1.5rem;
+                        }
                     }
                 }
-            }
+            }    
         }
         .redesSociales{
             display: flex;

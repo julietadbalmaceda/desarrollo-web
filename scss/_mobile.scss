@@ -1,166 +1,188 @@
-.container-flex{
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-}
-header {
-    @include sizes(100%, 15vh);
-    display: grid;
-    grid-template-columns: 20% 50% 15% 15%;
-    grid-template-rows: 1fr 1fr;
-    align-items: center;
-    .inputBuscador {
-    display: none;
-    }
-    .buscador{
-        grid-column: 3/4;
-        grid-row: 1;
-        display: flex;
-        justify-content: center;
-    }
-    .logo{
-        grid-row: 1;
-        grid-column: 1;
-        height: 7vmax;
-        margin-left: 1vh;
-        margin-top: 1vh;
-    }
-    .carrito{
-        display: flex;
-        justify-items: end;
-        grid-row: 1;
-        grid-column: 4/5;
-        align-self: center;
-    }
-    nav{
-        grid-row: 2/3;
-        grid-column: 1/5;
-        padding: 0;
-        ul{
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0;
-        }
-        ul li{
-            font-size: 0.75em;
-            margin: 0 0.75rem;
-        }
-    }
-}
-.containerHome{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    width: 100vw;
-    margin-bottom: 2rem;
-    .sectionBanner{
+@media only screen and (max-width: 767px){
+    .container-flex{
         display: flex;
         flex-direction: column;
-        align-items: center;
-        .articuloMovil{
-            width: 80%;
-            flex-direction: column;
-        }
-        .articuloBienvenida{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0;
-        }
+        width: 100vw;
     }
-    .tarjetasProductos{
-        display: flex;
-        flex-direction:column;
-        justify-content: center;
+    header {
+        @include sizes(100%, 15vh);
+        display: grid;
+        grid-template-columns: 20% 50% 15% 15%;
+        grid-template-rows: 1fr 1fr;
         align-items: center;
-        .productos{
-            width: 100%;
-            align-items:center;
-            margin: 1%;
-            .imagenesProductos{
-                width: 10rem;
+        .buscador{
+            grid-column: 3/4;
+            grid-row: 1;
+            display: flex;
+            justify-content: center;
+            .inputBuscador {
+            display: none;
+            }
+        }
+        .logo{
+            grid-row: 1;
+            grid-column: 1;
+            height: 7vmax;
+            margin-left: 1vh;
+            margin-top: 1vh;
+        }
+        .carrito{
+            display: flex;
+            justify-items: end;
+            grid-row: 1;
+            grid-column: 4/5;
+            align-self: center;
+        }
+        nav{
+            grid-row: 2/3;
+            grid-column: 1/5;
+            padding: 0;
+            ul{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+            }
+            ul li{
+                font-size: 0.75em;
+                margin: 0 0.75rem;
             }
         }
     }
-    .buttonProductos{
-    background-color: $colorSecundario;
-    color: $text-button;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    text-decoration: none;
-    }
-}
-h1{
-    padding: 1rem;
-    text-align: center;
-    font: 2em sans-serif;
-    color: $color-texto;
-    font-family: $text;
-}
-p{
-    display: flex;
-    justify-content: center;
-    font-family: $textSecundario;
-    color: $color-texto
-}
-button{
-    background-color: $colorPrimario;
-    border: none;
-    border-radius: 5px;
-}
-.productosArticleGrid{
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    h2{
-    margin: 0.75rem 0;
-    color: $color-texto;
-    font-family: $text;
-    }
-    .carruselProducto{
-        margin-bottom: 5vh;
-        #Carrusel1{
-            width: 12rem;
-        }
-    }
-    .parrafoArticleProductos{
+    .containerHome{
         display: flex;
-        padding: 20px;
         flex-direction: column;
         align-items: center;
+        justify-items: center;
+        width: 100vw;
+        margin-bottom: 2rem;
+        .sectionBanner{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .articuloMovil{
+                width: 80%;
+                flex-direction: column;
+            }
+            .articuloBienvenida{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0;
+            }
+        }
+        .tarjetasProductos{
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+            .productos{
+                width: 100%;
+                align-items:center;
+                margin: 1%;
+                .imagenesProductos{
+                    width: 10rem;
+                }
+            }
+        }
+        .buttonProductos{
+        background-color: $colorSecundario;
+        color: $text-button;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+        }
+    }
+    h1{
+        padding: 1rem;
         text-align: center;
+        font: 2em sans-serif;
+        color: $color-texto;
+        font-family: $text;
     }
-    .buttonProductos{
-        margin-bottom: 0.5rem;
+    p{
+        display: flex;
+        justify-content: center;
+        font-family: $textSecundario;
+        color: $color-texto
     }
-}
-.containerRegistrarse{
-    height: 90vh;
-}
-.containerIngresar{
-    @extend .containerRegistrarse;
-    height: 60vh;
-    .formIngresar{
-        margin-top: 2vh;
+    button{
+        background-color: $colorPrimario;
+        border: none;
+        border-radius: 5px;
     }
-}
-.containerContacto{
-    @extend .containerRegistrarse;
-    height: 75vh;
-}
-.contact-form {
-    width: 100%;
-}
-footer{
-    width: 100vw;
-    margin-top: 1rem;
-    .navFooter{
-        height: auto;    
-    } 
+    .productosArticleGrid{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        h2{
+        margin: 0.75rem 0;
+        color: $color-texto;
+        font-family: $text;
+        }
+        .carruselProducto{
+            margin-bottom: 5vh;
+            #Carrusel1{
+                width: 12rem;
+            }
+        }
+        .parrafoArticleProductos{
+            display: flex;
+            padding: 20px;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .buttonProductos{
+            margin-bottom: 0.5rem;
+        }
+    }
+    .containerRegistrarse{
+        height: 95vh;
+        .contact-form{
+            width: 90%;
+            .checkFormulario{
+                display: flex;
+                justify-content: space-between;
+                p{
+                    padding: 5px;
+                    text-align: center;
+                    width: 90%;
+                }
+            }
+        }
+    }
+    .containerIngresar{
+        @extend .containerRegistrarse;
+        height: 75vh;
+        .formIngresar{
+            margin-top: 2vh;
+            width: 85vw;
+        }
+    }
+    .containerContacto{
+        @extend .containerRegistrarse;
+        height: 75vh;
+    }
+    .containerCarrito{
+        height: 75vh;
+        img{
+            width: 40vh;
+        }
+    }     
+    footer{
+        width: 100vw;
+        height: 40vh;
+        margin-top: 1rem;
+        .navFooter{
+            height: auto;
+            div{
+                width: auto;
+            }    
+        } 
+    }
 }

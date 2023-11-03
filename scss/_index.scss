@@ -25,8 +25,8 @@
             h2:hover{
                 color: $colorSecundario;
             }
-            }
         }
+    }
     .tarjetasProductos{
         display: flex;
         flex-direction:row;
@@ -46,14 +46,14 @@
         grid-row: 6/7;
         grid-column: 4/6;
         .buttonProductos{
-        background-color: $colorSecundario;
-        color: $text-button;
-        border: none;
-        border-radius: 5px;
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        text-decoration: none;
+            background-color: $colorSecundario;
+            color: $text-button;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
         }
     }
 }

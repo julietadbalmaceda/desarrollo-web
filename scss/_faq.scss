@@ -1,0 +1,16 @@
+.containerFaq{
+    height: 80vh;
+    .accordion{
+        --bs-accordion-btn-focus-box-shadow: 0 0 0 0.10rem hsl(347, 100%, 69%);
+        .accordion-button{
+            color: $colorPrimario;
+        }
+        .accordion-button:not(.collapsed) {
+            color: $colorSecundario;
+            background-color: $colorPrimario;
+        }
+        .accordion-button:focus {
+            --accordion-btn-focus-border-color: $colorSecundario
+        }
+    }
+}

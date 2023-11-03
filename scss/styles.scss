@@ -3,6 +3,6 @@
 @import "index";
 @import "form";
 @import "productos";
-@media only screen and (max-width: 767px) {
-    @import "mobile";    
-}
+@import "carrito";
+@import "faq";
+@import "mobile";
